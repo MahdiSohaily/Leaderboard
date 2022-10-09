@@ -16,14 +16,25 @@
 </head>
 
 <body>
-
-  We're launching soon
-
-  Days
-  Hours
-  Minutes
-  Seconds
-
+  <main class="full-height">
+    <section class="leader-board" aria-labelledby="Leader-board-section">
+      <header>
+        <h1 class="primary-header text-uppercase text-white" id="Leader-board-section">leader board</h1>
+      </header>
+      <div class="board-data">
+        <div class="form">
+          <h2 class="secondary-header text-white">Add Your Score</h2>
+          <form action="javascript:void(0)" method="post">
+            <input type="text" placeholder="Your Name" name="name" aria-label="name" required minlength="5"
+              maxlength="20">
+            <input type="number" placeholder="Your Score" name="score" aria-label="score" required min="0" max="100">
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+        <div class="data">data</div>
+      </div>
+    </section>
+  </main>
   <script src="./index.js"></script>
 </body>
 

@@ -3,9 +3,9 @@
   --soft-red: hsl(345, 95%, 68%);
   --white: hsl(0, 0%, 100%);
   --dark-desaturated-blue: hsl(236, 21%, 26%);
-  --very-dark-blue: hsl(235, 16%, 14%);
+  --very-dark-blue: hsla(235, 15%, 14%, 0.668);
   --mostly-dark-blue: hsl(234, 17%, 12%);
-  
+
   --font-size: 14px;
   --fw-500: 500;
   --fw-700: 700;
@@ -86,5 +86,72 @@ select {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/* Utility classes */
+.full-height {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('../images/pattern-hills.svg'), url('../images/bg-stars.svg'),
+    var(--dark-desaturated-blue);
+  background-repeat: no-repeat;
+  background-size: contain, cover;
+  background-position: bottom;
+}
+
+.primary-header {
+  font-size: var(--size-500);
+  font-weight: var(--fw-700);
+  word-spacing: var(--size-100);
+  letter-spacing: var(--size-100);
+  text-align: center;
+}
+
+@media screen and (min-width: 40em) {
+  .primary-header {
+    font-size: var(--size-600);
+  }
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-white {
+  color: var(--white);
+}
+
+/* Component styles */
+.leader-board {
+  width: min(1040px, 95%);
+  height: 90vh;
+  margin: auto;
+}
+
+.board-data {
+  background-color: var(--very-dark-blue);
+  margin-top: var(--size-500);
+  padding: var(--size-500);
+  border-radius: var(--size-200);
+  min-height: 90%;
+  overflow: hidden;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--size-300);
+  text-align: center;
+}
+
+@media screen and (min-width: 40em) {
+  .form {
+    flex-direction: row;
+    gap: var(--size-600);
+    text-align: left;
   }
 }
