@@ -5,6 +5,18 @@
   --dark-desaturated-blue: hsl(236, 21%, 26%);
   --very-dark-blue: hsl(235, 16%, 14%);
   --mostly-dark-blue: hsl(234, 17%, 12%);
+  --font-size: 14px;
+
+  --size-100: 0.25em;
+  --size-200: 0.5em;
+  --size-300: 1em;
+  --size-400: 1.25em;
+  --size-500: 1.5em;
+  --size-600: 2em;
+  --size-700: 2.5em;
+  --size-800: 3.5em;
+  --size-900: 4em;
+  --size-xl: 5em;
 }
 /* Box sizing rules */
 *,
