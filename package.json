@@ -4,7 +4,9 @@
   "description": "",
   "private": true,
   "scripts": {
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "watch": "webpack --watch",
+    "start": "webpack serve --open"
   },
   "repository": {
     "type": "git",
