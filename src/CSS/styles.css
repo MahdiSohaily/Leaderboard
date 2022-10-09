@@ -5,7 +5,10 @@
   --dark-desaturated-blue: hsl(236, 21%, 26%);
   --very-dark-blue: hsl(235, 16%, 14%);
   --mostly-dark-blue: hsl(234, 17%, 12%);
+  
   --font-size: 14px;
+  --fw-500: 500;
+  --fw-700: 700;
 
   --size-100: 0.25em;
   --size-200: 0.5em;
