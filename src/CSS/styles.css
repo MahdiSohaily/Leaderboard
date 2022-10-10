@@ -93,9 +93,7 @@ select {
 .full-height {
   display: flex;
   min-height: 100vh;
-  background:
-    url('../images/pattern-hills.svg'),
-    url('../images/bg-stars.svg'),
+  background: url('../images/pattern-hills.svg'), url('../images/bg-stars.svg'),
     var(--very-dark-blue);
   background-repeat: no-repeat;
   background-size: contain, cover;
@@ -226,4 +224,19 @@ tbody tr {
 
 tbody tr:hover {
   background-color: var(--very-dark-blue-hover);
+}
+
+/* message style */
+.message {
+  position: fixed;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 360px;
+  padding: var(--size-500);
+  color: white;
+  text-align: center;
+  border-radius: var(--size-100);
+  background-color: var(--very-dark-blue);
+  transition: all 2s ease-in-out;
 }

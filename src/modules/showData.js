@@ -1,4 +1,10 @@
 const message = (message = 'Data Inserted successfully.') => {
+  const messageBox = document.querySelector('.message');
+  messageBox.innerHTML = message;
+  messageBox.style.bottom = '20px';
+  setTimeout(() => {
+    messageBox.style.bottom = '-100px';
+  }, 2000);
   console.log(message);
 };
 
