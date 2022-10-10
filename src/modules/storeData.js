@@ -7,6 +7,8 @@ const setGame = async (name = 'leaderBoard') => {
       'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games',
       { name: name }
     );
+    const gameID = response.data.result.split(' ')[3];
+    localStorage.setItem('game', gameID);
     return response;
   } catch (error) {
     console.log(error);
@@ -19,7 +21,6 @@ const store = async (studentName = '', studentScore = 0, gameID) => {
       `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameID}/scores/`,
       { user: studentName, score: studentScore }
     );
-    console.log(response);
   } catch (error) {
     console.error(error);
   }

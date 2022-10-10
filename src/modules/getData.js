@@ -1,9 +1,10 @@
+const axios = require('axios').default;
 const getData = async (gameID) => {
   try {
     const response = await axios.get(
-      `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameID}/scores/`,
+      `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameID}/scores/`
     );
-    console.log(response);
+    console.log(response.data.result);
   } catch (error) {
     console.error(error);
   }

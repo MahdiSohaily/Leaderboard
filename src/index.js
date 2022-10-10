@@ -1,6 +1,7 @@
 /* eslint-disable linebreak-style */
 import './CSS/styles.css';
 import { setGame, store } from './modules/storeData.js';
+import { getData } from './modules/getData';
 const form = document.querySelector('.form');
 const nameInput = document.querySelector('.name');
 const scoreInput = document.querySelector('.score');
@@ -24,4 +25,13 @@ form.addEventListener('submit', (event) => {
   }
   nameInput.value = null;
   scoreInput.value = null;
+});
+
+window.addEventListener('load', () => {
+  if (gameID) {
+    console.log('click')
+    getData(gameID);
+  } else {
+    console.log('not set');
+  }
 });
