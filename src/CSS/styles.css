@@ -145,7 +145,14 @@ select {
 /* Component styles */
 .leader-board {
   max-width: 1040px;
-  margin-inline: auto;
+  margin-inline: var(--size-300);
+}
+
+@media screen and (min-width: 40em) {
+  .leader-board {
+    max-width: 1040px;
+    margin-inline: auto;
+  }
 }
 
 .form-container {
