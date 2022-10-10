@@ -92,9 +92,7 @@ select {
 /* Utility classes */
 .full-height {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   background: url('../images/pattern-hills.svg'), url('../images/bg-stars.svg'),
     var(--dark-desaturated-blue);
   background-repeat: no-repeat;
@@ -133,17 +131,14 @@ select {
 .mt-4 {
   margin-top: var(--size-400);
 }
+
+.mt-5 {
+  margin-top: var(--size-500);
+}
 /* Component styles */
 .leader-board {
   width: min(1040px, 95%);
-  height: 90vh;
-  margin: auto;
-}
-
-.board-data {
-  margin-top: var(--size-500);
-  min-height: 90%;
-  overflow: hidden;
+  margin-inline: auto;
 }
 
 .form-container {
@@ -170,7 +165,6 @@ select {
 }
 
 .data-container {
-  height: 70vh;
 }
 
 @media screen and (min-width: 50em) {
