@@ -2,9 +2,10 @@
   --grayish-blue: hsl(237, 18%, 59%);
   --soft-red: hsl(345, 95%, 68%);
   --white: hsl(0, 0%, 100%);
-  --dark-desaturated-blue: hsl(236, 21%, 26%);
-  --very-dark-blue: hsla(235, 15%, 14%, 0.668);
-  --mostly-dark-blue: hsl(234, 17%, 12%);
+  --dark-desaturated-blue: hsla(236, 20%, 32%, 0.627);
+  --very-dark-blue: hsl(235, 16%, 14%);
+  --very-dark-blue-hover: hsla(235, 15%, 14%, 0.747);
+  --mostly-dark-blue: hsl(240, 15%, 6%);
 
   --font-size: 14px;
   --fw-500: 500;
@@ -94,7 +95,7 @@ select {
   display: flex;
   min-height: 100vh;
   background: url('../images/pattern-hills.svg'), url('../images/bg-stars.svg'),
-    var(--dark-desaturated-blue);
+    var(--very-dark-blue);
   background-repeat: no-repeat;
   background-size: contain, cover;
   background-position: bottom;
@@ -122,10 +123,14 @@ select {
   color: var(--white);
 }
 
+.text-red {
+  color: var(--soft-red);
+}
+
 .container {
-  background-color: var(--very-dark-blue);
+  background-color: var(--dark-desaturated-blue);
   border-radius: var(--size-200);
-  padding: var(--size-500);
+  padding: var(--size-300) var(--size-500);
 }
 
 .mt-4 {
@@ -145,6 +150,7 @@ select {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: var(--size-300);
   text-align: center;
 }
@@ -162,6 +168,15 @@ select {
   max-width: 280px;
   margin: var(--size-100);
   padding: var(--size-200) var(--size-300);
+  border: none;
+  border-radius: var(--size-100);
+}
+
+button {
+  padding: var(--size-200) var(--size-300);
+  border-radius: var(--size-100);
+  cursor: pointer;
+  border: none;
 }
 
 .data-container {
@@ -173,4 +188,35 @@ select {
     gap: var(--size-600);
     text-align: left;
   }
+}
+
+/* data container section */
+.data-table {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border-spacing: 0px;
+}
+
+th {
+  padding-block: var(--size-400);
+  font-size: var(--size-300);
+  border-bottom: 2px solid var(--soft-red);
+}
+
+tbody {
+  text-align: center;
+}
+
+tbody td {
+  padding-block: var(--size-200);
+  color: var(--white);
+}
+
+tbody tr {
+  cursor: pointer;
+}
+
+tbody tr:hover {
+  background-color: var(--very-dark-blue-hover);
 }
