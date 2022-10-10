@@ -6,11 +6,9 @@
   --very-dark-blue: hsl(235, 16%, 14%);
   --very-dark-blue-hover: hsla(235, 15%, 14%, 0.747);
   --mostly-dark-blue: hsl(240, 15%, 6%);
-
   --font-size: 14px;
   --fw-500: 500;
   --fw-700: 700;
-
   --size-100: 0.25em;
   --size-200: 0.5em;
   --size-300: 1em;
@@ -22,6 +20,7 @@
   --size-900: 4em;
   --size-xl: 5em;
 }
+
 /* Box sizing rules */
 *,
 *::before,
@@ -94,7 +93,9 @@ select {
 .full-height {
   display: flex;
   min-height: 100vh;
-  background: url('../images/pattern-hills.svg'), url('../images/bg-stars.svg'),
+  background:
+    url('../images/pattern-hills.svg'),
+    url('../images/bg-stars.svg'),
     var(--very-dark-blue);
   background-repeat: no-repeat;
   background-size: contain, cover;
@@ -140,9 +141,10 @@ select {
 .mt-5 {
   margin-top: var(--size-500);
 }
+
 /* Component styles */
 .leader-board {
-  width: min(1040px, 95%);
+  max-width: 1040px;
   margin-inline: auto;
 }
 
@@ -179,9 +181,6 @@ button {
   border: none;
 }
 
-.data-container {
-}
-
 @media screen and (min-width: 50em) {
   .form-container {
     flex-direction: row;
@@ -195,7 +194,7 @@ button {
   width: 100%;
   padding: 0;
   margin: 0;
-  border-spacing: 0px;
+  border-spacing: 0;
 }
 
 th {
