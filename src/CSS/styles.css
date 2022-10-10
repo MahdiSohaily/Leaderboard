@@ -144,6 +144,7 @@ select {
 
 /* Component styles */
 .leader-board {
+  width: 100%;
   max-width: 1040px;
   margin-inline: var(--size-300);
 }
