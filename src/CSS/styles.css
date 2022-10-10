@@ -124,6 +124,15 @@ select {
   color: var(--white);
 }
 
+.container {
+  background-color: var(--very-dark-blue);
+  border-radius: var(--size-200);
+  padding: var(--size-500);
+}
+
+.mt-4 {
+  margin-top: var(--size-400);
+}
 /* Component styles */
 .leader-board {
   width: min(1040px, 95%);
@@ -132,15 +141,12 @@ select {
 }
 
 .board-data {
-  background-color: var(--very-dark-blue);
   margin-top: var(--size-500);
-  padding: var(--size-500);
-  border-radius: var(--size-200);
   min-height: 90%;
   overflow: hidden;
 }
 
-.form {
+.form-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -148,8 +154,27 @@ select {
   text-align: center;
 }
 
-@media screen and (min-width: 40em) {
-  .form {
+.form-container h2 {
+  flex: 25%;
+}
+
+.form {
+  flex: 75%;
+}
+
+.form-input {
+  width: 100%;
+  max-width: 280px;
+  margin: var(--size-100);
+  padding: var(--size-200) var(--size-300);
+}
+
+.data-container {
+  height: 70vh;
+}
+
+@media screen and (min-width: 50em) {
+  .form-container {
     flex-direction: row;
     gap: var(--size-600);
     text-align: left;
