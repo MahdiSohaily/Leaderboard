@@ -4,7 +4,7 @@ const getData = async (gameID) => {
     const response = await axios.get(
       `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameID}/scores/`
     );
-    console.log(response.data.result);
+    return response;
   } catch (error) {
     console.error(error);
   }

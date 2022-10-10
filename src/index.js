@@ -2,6 +2,13 @@
 import './CSS/styles.css';
 import { setGame, store } from './modules/storeData.js';
 import { getData } from './modules/getData';
+import { showData } from './modules/showData';
+
+/**
+ * Variables for storing DOM
+ * references to check for events
+ * and input data
+ */
 const form = document.querySelector('.form');
 const nameInput = document.querySelector('.name');
 const scoreInput = document.querySelector('.score');
@@ -27,10 +34,20 @@ form.addEventListener('submit', (event) => {
   scoreInput.value = null;
 });
 
+/**
+ * A function to check for window
+ * when it's fully loaded
+ * get the data from API
+ * and display it back to the UI.
+ * @parameter_one the type of event.
+ * @parameter_two the callback function.
+ */
+
 window.addEventListener('load', () => {
   if (gameID) {
-    console.log('click')
-    getData(gameID);
+    getData(gameID).then(() => {
+      showData
+    });
   } else {
     console.log('not set');
   }

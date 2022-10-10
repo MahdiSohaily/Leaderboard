@@ -1,4 +1,6 @@
 const message = (message = 'Data Inserted successfully.') => {
   console.log(message);
 };
-export default message;
+
+const showData = () => {};
+export { message, showData };
