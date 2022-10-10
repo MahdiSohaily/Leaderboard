@@ -1,6 +1,6 @@
 /* eslint-disable linebreak-style */
 import './CSS/styles.css';
-import { setGame, store } from './modules/setData/';
+import { setGame, store } from './modules/storeData.js';
 const form = document.querySelector('.form');
 const nameInput = document.querySelector('.name');
 const scoreInput = document.querySelector('.score');
@@ -22,4 +22,6 @@ form.addEventListener('submit', (event) => {
       store(name, score, gameID);
     });
   }
+  nameInput.value = null;
+  scoreInput.value = null;
 });

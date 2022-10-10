@@ -19,6 +19,7 @@ const store = async (studentName = '', studentScore = 0, gameID) => {
       `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameID}/scores/`,
       { user: studentName, score: studentScore }
     );
+    console.log(response);
   } catch (error) {
     console.error(error);
   }
