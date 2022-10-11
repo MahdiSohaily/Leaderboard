@@ -5,8 +5,8 @@ const axios = require('axios').default;
 /**
  * A function to get stored data
  * to an external API
- * @param {string} gameID 
- * @returns 
+ * @param {string} gameID
+ * @returns
  */
 const getData = async (gameID) => {
   let response = null;

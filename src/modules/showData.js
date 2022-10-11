@@ -1,7 +1,7 @@
 /**
  * A function to display a toast
  * message when data is inserted successfully
- * @param {string} message 
+ * @param {string} message
  */
 const message = (msg = 'Data Inserted successfully.') => {
   const messageBox = document.querySelector('.message');
@@ -16,10 +16,10 @@ const message = (msg = 'Data Inserted successfully.') => {
  * A function to loop over
  * an array of objects and set
  * them inside HTML elements
- * and return a collection of 
+ * and return a collection of
  * HTML element
- * @param {Array} data 
- * @returns 
+ * @param {Array} data
+ * @returns
  */
 const showData = (data) => {
   let pattern = '';
