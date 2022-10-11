@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+
+  <title>Leader Board</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@500;700&display=swap" rel="stylesheet">
+<script defer src="runtime.js"></script><script defer src="index.js"></script></head>
+
+<body>
+  <main class="full-height">
+    <section class="leader-board mt-5" aria-labelledby="Leader-board-section">
+      <header>
+        <h1 class="primary-header text-uppercase text-white" id="Leader-board-section">leader board</h1>
+      </header>
+      <div class="board-data mt-5">
+        <div class="form-container container">
+          <h2 class="secondary-header text-white">Add Your Score</h2>
+          <form class="form" action="javascript:void(0)" method="post">
+            <input class="name form-input" type="text" placeholder="Your Name" name="name" aria-label="name" required
+              minlength="3" maxlength="20">
+            <input class="score form-input" type="number" placeholder="Your Score" name="score" aria-label="score" required
+              min="0" max="100">
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+        <div class="data-container container mt-4">
+          <div class="table-title">
+            <h2 class="text-white">Recent Scores</h2>
+            <button class="refresh">Refresh</button>
+          </div>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th class="text-white">NO</th>
+                <th class="text-white">Name</th>
+                <th class="text-white">Score</th>
+              </tr>
+            </thead>
+            <tbody class="api-data">
+              <!-- STORED DATA IN GAME API WELL BE DISPLAYED HERE -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="message"></div>
+</body>
+
+</html>
