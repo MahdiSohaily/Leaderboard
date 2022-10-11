@@ -203,10 +203,16 @@ button {
   border-spacing: 0;
 }
 
+.table-title {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--soft-red);
+  padding-bottom: var(--size-300);
+}
+
 th {
   padding-block: var(--size-400);
   font-size: var(--size-300);
-  border-bottom: 2px solid var(--soft-red);
 }
 
 tbody {
