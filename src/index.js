@@ -48,7 +48,8 @@ window.addEventListener('load', () => {
   if (gameID) {
     getData(gameID).then((response) => {
       const toBeShowed = response.data.result;
-      showData(toBeShowed);
+      const received = showData(toBeShowed);
+      
     });
   } else {
     console.log('not set');

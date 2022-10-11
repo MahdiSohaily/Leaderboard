@@ -8,5 +8,16 @@ const message = (message = 'Data Inserted successfully.') => {
   console.log(message);
 };
 
-const showData = () => {};
+const showData = (data) => {
+  let pattern = '';
+  for (let item in data) {
+    pattern += `
+    <tr>
+      <td>${Number(item) + 1}</td>
+      <td>${data[item].user}</td>
+      <td>${data[item].score}</td>
+    </tr>`;
+  }
+  return pattern;
+};
 export { message, showData };
