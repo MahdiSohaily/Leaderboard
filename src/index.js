@@ -26,7 +26,8 @@ form.addEventListener('submit', (event) => {
   if (gameID) {
     store(name, score, gameID);
   } else {
-    setGame('LeaderBoard Game').then(() => {
+    setGame('LeaderBoard Game').then((response) => {
+      gameID = response.data.result.split(' ')[3];
       store(name, score, gameID);
     });
   }
@@ -45,8 +46,9 @@ form.addEventListener('submit', (event) => {
 
 window.addEventListener('load', () => {
   if (gameID) {
-    getData(gameID).then(() => {
-      showData
+    getData(gameID).then((response) => {
+      const toBeShowed = response.data.result;
+      showData(toBeShowed);
     });
   } else {
     console.log('not set');

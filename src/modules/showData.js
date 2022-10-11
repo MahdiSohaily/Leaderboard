@@ -4,7 +4,7 @@ const message = (message = 'Data Inserted successfully.') => {
   messageBox.style.bottom = '20px';
   setTimeout(() => {
     messageBox.style.bottom = '-100px';
-  }, 2000);
+  }, 4000);
   console.log(message);
 };
 
