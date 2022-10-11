@@ -1,0 +1,229 @@
+:root {
+  --grayish-blue: hsl(237, 18%, 59%);
+  --soft-red: hsl(345, 95%, 68%);
+  --white: hsl(0, 0%, 100%);
+  --dark-desaturated-blue: hsla(236, 20%, 32%, 0.627);
+  --very-dark-blue: hsl(235, 16%, 14%);
+  --very-dark-blue-hover: hsla(235, 15%, 14%, 0.747);
+  --mostly-dark-blue: hsl(240, 15%, 6%);
+  --font-size: 14px;
+  --fw-500: 500;
+  --fw-700: 700;
+  --size-100: 0.25em;
+  --size-200: 0.5em;
+  --size-300: 1em;
+  --size-400: 1.25em;
+  --size-500: 1.5em;
+  --size-600: 2em;
+  --size-700: 2.5em;
+  --size-800: 3.5em;
+  --size-900: 4em;
+  --size-xl: 5em;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Red Hat Text', sans-serif;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Utility classes */
+.full-height {
+  display: flex;
+  min-height: 100vh;
+  background:
+    url('../images/pattern-hills.svg'),
+    url('../images/bg-stars.svg'),
+    var(--very-dark-blue);
+  background-repeat: no-repeat;
+  background-size: contain, cover;
+  background-position: bottom;
+}
+
+.primary-header {
+  font-size: var(--size-500);
+  font-weight: var(--fw-700);
+  word-spacing: var(--size-100);
+  letter-spacing: var(--size-100);
+  text-align: center;
+}
+
+@media screen and (min-width: 40em) {
+  .primary-header {
+    font-size: var(--size-600);
+  }
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-white {
+  color: var(--white);
+}
+
+.text-red {
+  color: var(--soft-red);
+}
+
+.container {
+  background-color: var(--dark-desaturated-blue);
+  border-radius: var(--size-200);
+  padding: var(--size-300) var(--size-500);
+}
+
+.mt-4 {
+  margin-top: var(--size-400);
+}
+
+.mt-5 {
+  margin-top: var(--size-500);
+}
+
+/* Component styles */
+.leader-board {
+  width: 100%;
+  max-width: 1040px;
+  margin-inline: var(--size-300);
+}
+
+@media screen and (min-width: 40em) {
+  .leader-board {
+    max-width: 1040px;
+    margin-inline: auto;
+  }
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--size-300);
+  text-align: center;
+}
+
+.form-container h2 {
+  flex: 25%;
+}
+
+.form {
+  flex: 75%;
+}
+
+.form-input {
+  width: 100%;
+  max-width: 280px;
+  margin: var(--size-100);
+  padding: var(--size-200) var(--size-300);
+  border: none;
+  border-radius: var(--size-100);
+}
+
+button {
+  padding: var(--size-200) var(--size-300);
+  border-radius: var(--size-100);
+  cursor: pointer;
+  border: none;
+}
+
+@media screen and (min-width: 50em) {
+  .form-container {
+    flex-direction: row;
+    gap: var(--size-600);
+    text-align: left;
+  }
+}
+
+/* data container section */
+.data-table {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border-spacing: 0;
+}
+
+th {
+  padding-block: var(--size-400);
+  font-size: var(--size-300);
+  border-bottom: 2px solid var(--soft-red);
+}
+
+tbody {
+  text-align: center;
+}
+
+tbody td {
+  padding-block: var(--size-200);
+  color: var(--white);
+}
+
+tbody tr {
+  cursor: pointer;
+}
+
+tbody tr:hover {
+  background-color: var(--very-dark-blue-hover);
+}
