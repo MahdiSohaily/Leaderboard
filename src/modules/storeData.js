@@ -17,7 +17,7 @@ const axios = require('axios').default;
  * @returns 
  */
 const setGame = async (name = 'leaderBoard') => {
-  let response;
+  let response = null;
   try {
     response = await axios.post(
       'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games',
