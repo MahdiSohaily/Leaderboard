@@ -9,7 +9,7 @@ const axios = require('axios').default;
  * @returns 
  */
 const getData = async (gameID) => {
-  let response;
+  let response = null;
   try {
     response = await axios.get(
       `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameID}/scores/`,
