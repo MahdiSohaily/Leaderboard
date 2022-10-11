@@ -93,7 +93,9 @@ select {
 .full-height {
   display: flex;
   min-height: 100vh;
-  background: url('../images/pattern-hills.svg'), url('../images/bg-stars.svg'),
+  background:
+    url('../images/pattern-hills.svg'),
+    url('../images/bg-stars.svg'),
     var(--very-dark-blue);
   background-repeat: no-repeat;
   background-size: contain, cover;
