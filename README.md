@@ -47,7 +47,7 @@ npm run start
 
 ### Links
 
-- Live Site URL: [See Demo](https://mahdisohaily.github.io/Todo-app/)
+- Live Site URL: [See Demo](https://mahdisohaily.github.io/Leaderboard/)
 
 ## My process
 

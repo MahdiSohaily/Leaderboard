@@ -107,7 +107,6 @@ select {
   font-weight: var(--fw-700);
   word-spacing: var(--size-100);
   letter-spacing: var(--size-100);
-  text-align: center;
 }
 
 @media screen and (min-width: 40em) {
@@ -142,6 +141,10 @@ select {
   margin-top: var(--size-500);
 }
 
+.mt-xl {
+  margin-top: var(--size-xl);
+}
+
 /* Component styles */
 .leader-board {
   width: 100%;
@@ -156,27 +159,39 @@ select {
   }
 }
 
+.board-data {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-400);
+}
+
+.board-data > * {
+  flex: 1;
+}
+
+@media screen and (min-width: 40em) {
+  .board-data {
+    flex-direction: row;
+  }
+}
+
 .form-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  order: 1;
   gap: var(--size-300);
   text-align: center;
 }
 
-.form-container h2 {
-  flex: 25%;
-}
-
 .form {
-  flex: 75%;
+  padding-block: var(--size-400);
 }
 
 .form-input {
   width: 100%;
-  max-width: 280px;
-  margin: var(--size-100);
+  margin: var(--size-200);
   padding: var(--size-200) var(--size-300);
   border: none;
   border-radius: var(--size-100);
@@ -189,15 +204,32 @@ button {
   border: none;
 }
 
+.form button {
+  margin: var(--size-200) var(--size-200);
+}
+
 @media screen and (min-width: 50em) {
   .form-container {
-    flex-direction: row;
+    flex: 40%;
+    display: block;
     gap: var(--size-600);
     text-align: left;
+    order: 2;
   }
 }
 
 /* data container section */
+.data-container {
+  order: 2;
+}
+
+@media screen and (min-width: 40em) {
+  .data-container {
+    flex: 60%;
+    order: 1;
+  }
+}
+
 .data-table {
   width: 100%;
   padding: 0;

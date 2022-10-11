@@ -16,22 +16,24 @@
 
 <body>
   <main class="full-height">
-    <section class="leader-board mt-5" aria-labelledby="Leader-board-section">
+    <section class="leader-board mt-xl" aria-labelledby="Leader-board-section">
       <header>
         <h1 class="primary-header text-uppercase text-white" id="Leader-board-section">leader board</h1>
       </header>
-      <div class="board-data mt-5">
+      <div class="board-data mt-xl">
         <div class="form-container container">
-          <h2 class="secondary-header text-white">Add Your Score</h2>
+          <div class="table-title">
+            <h2 class="secondary-header text-white">Add Your Score</h2>
+          </div>
           <form class="form" action="javascript:void(0)" method="post">
             <input class="name form-input" type="text" placeholder="Your Name" name="name" aria-label="name" required
               minlength="3" maxlength="20">
-            <input class="score form-input" type="number" placeholder="Your Score" name="score" aria-label="score" required
-              min="0" max="100">
+            <input class="score form-input" type="number" placeholder="Your Score" name="score" aria-label="score"
+              required min="0" max="100">
             <button type="submit">Submit</button>
           </form>
         </div>
-        <div class="data-container container mt-4">
+        <div class="data-container container">
           <div class="table-title">
             <h2 class="text-white">Recent Scores</h2>
             <button class="refresh">Refresh</button>

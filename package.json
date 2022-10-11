@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack --config webpack.config.js",
     "watch": "webpack --watch",
-    "start": "webpack serve --open"
+    "start": "webpack serve --open",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/MahdiSohaily/Leaderboard/issues"
   },
-  "homepage": "https://github.com/MahdiSohaily/Leaderboard#readme",
+  "homepage": "https://mahdisohaily.github.io/Leaderboard/",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.1",
@@ -37,6 +38,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
-    "axios": "^1.1.2"
+    "axios": "^1.1.2",
+    "gh-pages": "^4.0.0"
   }
 }
