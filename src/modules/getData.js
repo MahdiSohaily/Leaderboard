@@ -1,13 +1,18 @@
+import { message } from './showData.js';
+
 const axios = require('axios').default;
+
 const getData = async (gameID) => {
+  let response;
   try {
-    const response = await axios.get(
+    response = await axios.get(
       `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameID}/scores/`
     );
     return response;
   } catch (error) {
-    console.error(error);
+    message(error);
   }
+  return response;
 };
 
-export { getData };
+export default getData;

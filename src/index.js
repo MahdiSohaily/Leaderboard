@@ -1,8 +1,7 @@
-/* eslint-disable linebreak-style */
 import './CSS/styles.css';
 import { setGame, store } from './modules/storeData.js';
-import { getData } from './modules/getData';
-import { showData } from './modules/showData';
+import getData from './modules/getData.js';
+import { showData } from './modules/showData.js';
 
 /**
  * Variables for storing DOM
@@ -29,8 +28,8 @@ form.addEventListener('submit', (event) => {
     store(name, score, gameID);
   } else {
     setGame('LeaderBoard Game').then((response) => {
-      gameID = response.data.result.split(' ')[3];
-      store(name, score, gameID);
+      const ID = response.data.result.split(' ')[3];
+      store(name, score, ID);
     });
   }
   nameInput.value = null;

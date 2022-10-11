@@ -5,17 +5,16 @@ const message = (message = 'Data Inserted successfully.') => {
   setTimeout(() => {
     messageBox.style.bottom = '-100px';
   }, 4000);
-  console.log(message);
 };
 
 const showData = (data) => {
   let pattern = '';
-  for (let item in data) {
+  for (let index = 0; index < data.length; index += 1) {
     pattern += `
     <tr>
-      <td>${Number(item) + 1}</td>
-      <td>${data[item].user}</td>
-      <td>${data[item].score}</td>
+      <td>${Number(index) + 1}</td>
+      <td>${data[index].user}</td>
+      <td>${data[index].score}</td>
     </tr>`;
   }
   return pattern;

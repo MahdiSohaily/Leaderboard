@@ -1,4 +1,4 @@
-import { message, showData } from './showData';
+import { message } from './showData.js';
 
 /**
  * An async function to send a post request
@@ -11,17 +11,19 @@ import { message, showData } from './showData';
 const axios = require('axios').default;
 
 const setGame = async (name = 'leaderBoard') => {
+  let response;
   try {
-    const response = await axios.post(
+    response = await axios.post(
       'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games',
-      { name: name }
+      { name },
     );
     const gameID = response.data.result.split(' ')[3];
     localStorage.setItem('game', gameID);
     return response;
   } catch (error) {
-    console.log(error);
+    message(error);
   }
+  return response;
 };
 
 /**
@@ -35,11 +37,11 @@ const store = async (studentName = '', studentScore = 0, gameID) => {
   try {
     const response = await axios.post(
       `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameID}/scores/`,
-      { user: studentName, score: studentScore }
+      { user: studentName, score: studentScore },
     );
     await message(response.data.result);
   } catch (error) {
-    console.error(error);
+    message(error);
   }
 };
 
