@@ -3,9 +3,9 @@
  * message when data is inserted successfully
  * @param {string} message 
  */
-const message = (message = 'Data Inserted successfully.') => {
+const message = (msg = 'Data Inserted successfully.') => {
   const messageBox = document.querySelector('.message');
-  messageBox.innerHTML = message;
+  messageBox.innerHTML = msg;
   messageBox.style.bottom = '20px';
   setTimeout(() => {
     messageBox.style.bottom = '-100px';
