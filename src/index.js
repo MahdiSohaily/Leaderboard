@@ -13,6 +13,7 @@ const form = document.querySelector('.form');
 const nameInput = document.querySelector('.name');
 const scoreInput = document.querySelector('.score');
 const apiData = document.querySelector('.api-data');
+const refresh = document.querySelector('.refresh');
 const gameID = (() => localStorage.getItem('game'))();
 
 /**
@@ -46,6 +47,22 @@ form.addEventListener('submit', (event) => {
  */
 
 window.addEventListener('load', () => {
+  if (gameID) {
+    getData(gameID).then((response) => {
+      const toBeShowed = response.data.result;
+      const received = showData(toBeShowed);
+      apiData.innerHTML = received;
+    });
+  } else {
+    apiData.innerHTML = `
+    <tr>
+      <td colspan='3'>Nothing To Show!</td>
+    </tr>
+    `;
+  }
+});
+
+refresh.addEventListener('click', () => {
   if (gameID) {
     getData(gameID).then((response) => {
       const toBeShowed = response.data.result;
