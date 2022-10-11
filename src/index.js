@@ -49,7 +49,8 @@ window.addEventListener('load', () => {
     getData(gameID).then((response) => {
       const toBeShowed = response.data.result;
       const received = showData(toBeShowed);
-      
+      const apiData = document.querySelector('.api-data');
+      apiData.innerHTML = received;
     });
   } else {
     console.log('not set');
