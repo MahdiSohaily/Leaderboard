@@ -10,6 +10,12 @@ import { message } from './showData.js';
  */
 const axios = require('axios').default;
 
+/**
+ * an async function which send a
+ * post request to an external API
+ * @param {string} name 
+ * @returns 
+ */
 const setGame = async (name = 'leaderBoard') => {
   let response;
   try {
