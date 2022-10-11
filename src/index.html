@@ -8,11 +8,10 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
-  <title>Frontend Mentor | Launch countdown timer</title>
+  <title>Leader Board</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./CSS/styles.css">
 </head>
 
 <body>
@@ -25,14 +24,18 @@
         <div class="form-container container">
           <h2 class="secondary-header text-white">Add Your Score</h2>
           <form class="form" action="javascript:void(0)" method="post">
-            <input class="form-input" type="text" placeholder="Your Name" name="name" aria-label="name" required
-              minlength="5" maxlength="20">
-            <input class="form-input" type="number" placeholder="Your Score" name="score" aria-label="score" required
+            <input class="name form-input" type="text" placeholder="Your Name" name="name" aria-label="name" required
+              minlength="3" maxlength="20">
+            <input class="score form-input" type="number" placeholder="Your Score" name="score" aria-label="score" required
               min="0" max="100">
             <button type="submit">Submit</button>
           </form>
         </div>
         <div class="data-container container mt-4">
+          <div class="table-title">
+            <h2 class="text-white">Recent Scores</h2>
+            <button class="refresh">Refresh</button>
+          </div>
           <table class="data-table">
             <thead>
               <tr>
@@ -41,64 +44,15 @@
                 <th class="text-white">Score</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Mahdi Rezaei</td>
-                <td>100</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Mahdi Rezaei</td>
-                <td>100</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Mahdi Rezaei</td>
-                <td>100</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>Mahdi Rezaei</td>
-                <td>100</td>
-              </tr>
-              <tr>
-                <td>5</td>
-                <td>Mahdi Rezaei</td>
-                <td>100</td>
-              </tr>
-              <tr>
-                <td>6</td>
-                <td>Mahdi Rezaei</td>
-                <td>100</td>
-              </tr>
-              <tr>
-                <td>7</td>
-                <td>Mahdi Rezaei</td>
-                <td>100</td>
-              </tr>
-              <tr>
-                <td>8</td>
-                <td>Mahdi Rezaei</td>
-                <td>100</td>
-              </tr>
-              <tr>
-                <td>9</td>
-                <td>Mahdi Rezaei</td>
-                <td>100</td>
-              </tr>
-              <tr>
-                <td>10</td>
-                <td>Mahdi Rezaei</td>
-                <td>100</td>
-              </tr>
+            <tbody class="api-data">
+              <!-- STORED DATA IN GAME API WELL BE DISPLAYED HERE -->
             </tbody>
           </table>
         </div>
       </div>
     </section>
   </main>
-  <script src="./index.js"></script>
+  <div class="message"></div>
 </body>
 
 </html>
